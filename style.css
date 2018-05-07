@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Styling used to create header and left/right sidebars */
+body{
+  margin:0;
+  padding:0 right-sidebar-<length> 0 left-sidebar-<length>;
+}
+div#header{
+  position:absolute;
+  top:40%;
+  left:left-sidebar-<length>;
+  width:500%;
+  height:header-<length>;
+}
+div#left-sidebar{
+  position:absolute;
+  top:40%;
+  left:0;
+  width:left-sidebar-<length>;
+  height:100%;
+  overflow-x: hidden;
+}
+
+
+@media screen{
+  body>div#header{
+   position:fixed;
+  }
+  body>div#left-sidebar{
+  position:fixed;
+  }
+}
+
+* html body{
+  overflow:hidden;
+} 
+* html div#content{
+  height:100%;
+  overflow:auto;
+}
+
+/* Styling used for the background image
+ *
+*/
+.bg {
+    /* The image used */
+    background-image: url("background-tree.png");
+
+    /* Full height */
+    height: 40%; 
+
+    /* Center and scale the image nicely */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Styling used for the UL
+ * 
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 150px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #555 (gray) on hover */
+li a:hover {
+    background-color: #555;
+}
+
+/*  CSS for the content
+ *
+ */
+ 
+ div#content {
+    margin-left: 150px;
+    padding: 16px;
+    height: 5000px;
+ }
