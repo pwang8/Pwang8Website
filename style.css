@@ -3,51 +3,19 @@ body, html {
     margin: 0;
 }
 
-/* Styling used to create header and left/right sidebars */
-body{
-  margin:0;
-  padding:0 right-sidebar-<length> 0 left-sidebar-<length>;
-}
-div#header{
-  position:absolute;
-  top:40%;
-  left:left-sidebar-<length>;
-  width:500%;
-  height:header-<length>;
-}
-div#left-sidebar{
-  position:absolute;
-  top:40%;
-  left:0;
-  width:left-sidebar-<length>;
-  height:100%;
-  overflow-x: hidden;
-}
+/*  Font imports
+ *
+ */
+@font-face { font-family: Oswald; src: url('./fonts/Oswald/Oswald-Regular.ttf');}
+@font-face { font-family: Signika; src: url('./fonts/Signika/Signika-Regular.ttf');}
 
 
-@media screen{
-  body>div#header{
-   position:fixed;
-  }
-  body>div#left-sidebar{
-  position:fixed;
-  }
-}
-
-* html body{
-  overflow:hidden;
-} 
-* html div#content{
-  height:100%;
-  overflow:auto;
-}
-
-/* Styling used for the background image
+/* Styling used for the background/header image
  *
 */
 .bg {
     /* The image used */
-    background-image: url("background-tree.png");
+    background-image: url("images/background-tree.png");
 
     /* Full height */
     height: 40%; 
@@ -58,29 +26,36 @@ div#left-sidebar{
     background-size: cover;
 }
 
-/* Styling used for the UL
+/* Styling used for the Sidebar
  * 
 */
+div#left-sidebar{
+  position:sticky;
+  z-index:1;
+  top:0px;
+  margin:0px;
+  left:0;
+  min-width: 150px;
+  width:150px;
+  height:100%;
+  overflow-x:hidden;
+}
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    width: 150px;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  margin: 0;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #333;
+  font-family: Signika;
 }
-
 /* Change the link color to #555 (gray) on hover */
 li a:hover {
     background-color: #555;
@@ -89,9 +64,12 @@ li a:hover {
 /*  CSS for the content
  *
  */
+ div#main-content {
+    display: flex;
+ }
  
  div#content {
-    margin-left: 150px;
-    padding: 16px;
+    margin-left: 10px;
+    padding: 5px;
     height: 5000px;
  }
