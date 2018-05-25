@@ -1,44 +1,76 @@
+/*  General CSS
+ *
+ */
 body, html {
     height: 100%;
     margin: 0;
+    background-color: #FFFFFF; /* Temporary to see layout better */
 }
+/*  Contenders for colour schemes:(sidebar then background)
+ *  # N/A
+ *  #8FB5A5 light blue
+ *  bccbcd fog blue for background
+*/
 
 /*  Font imports
  *
  */
 @font-face { font-family: Oswald; src: url('./fonts/Oswald/Oswald-Regular.ttf');}
 @font-face { font-family: Signika; src: url('./fonts/Signika/Signika-Regular.ttf');}
+@font-face { font-family: MontserratMediumItalic; src: url('./fonts/Montserrat/Montserrat-MediumItalic.ttf');}
+@font-face { font-family: MontserratRegular; src: url('./fonts/Montserrat/Montserrat-Regular.ttf');}
 
-
-/* Styling used for the background/header image
- *
+/* Header Page Style
+ * 373737 charcoal, f4f4f4 paper
 */
-.bg {
-    /* The image used */
-    background-image: url("images/background-tree.png");
+div#title-header {
+  background-color: #f4f4f4;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40%;
+  width: 100%;
+  
+}
 
-    /* Full height */
-    height: 40%; 
+div.profile-card {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    /* Center and scale the image nicely */
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+img#profile-photo {
+  height:200px;
+  width:200px;
+  max-height:200px;
+  max-width:200px;
+  display:inline-block;
+  float: left;
+}
+
+h1#title-intro{
+  font-family: MontserratMediumItalic;
+  font-weight: normal;
+  font-size: 50px;
+  display:inline-block;
+  float: left;
+  padding: 10px 0px 10px 40px;
+  
 }
 
 /* Styling used for the Sidebar
  * 
 */
 div#left-sidebar{
-  position:sticky;
+  position:fixed;
   z-index:1;
-  top:0px;
+  top:35px;
   margin:0px;
   left:0;
-  min-width: 150px;
-  width:150px;
-  height:100%;
-  overflow-x:hidden;
+  min-width: 175px;
+  width:175px;
+  overflow:hidden;
 }
 ul {
   list-style-type: none;
@@ -48,28 +80,14 @@ ul {
 }
 li a {
   display: block;
-  color: white;
+  color: #373737;
   margin: 0;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: #333;
-  font-family: Signika;
+  font-family: MontserratRegular;
 }
 /* Change the link color to #555 (gray) on hover */
 li a:hover {
-    background-color: #555;
+    font-weight:bold
 }
-
-/*  CSS for the content
- *
- */
- div#main-content {
-    display: flex;
- }
- 
- div#content {
-    margin-left: 10px;
-    padding: 5px;
-    height: 5000px;
- }

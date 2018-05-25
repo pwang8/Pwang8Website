@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <!-- TODO List:
-  Make left sidebar a sticky sidebar, it doesn't start at the very top but if you scroll down it'll scroll up a bit til it reaches the top then stay as it is. Aka, you don't scroll out of the sidebar but it doesn't leave the annoying gap above it when you scroll down.
+  Mostly just design ideas along with actual content population
+  -Consider full screen image at the start, with animation when you scroll down to see the rest of the website(the content with the sidebar)
+  -Consider adding symbols to the sidebar, although i really don't like the idea so probably gonna scrap this idea lol
+  -figure out how to not have the main body be stretched super wide(when full screen). There's so much white space and the text should not have to cover everything
 -->
 <head>
 <meta charset="UTF-8">
@@ -13,20 +16,22 @@
 </head>
 
 <body>
-<div class="bg"></div>
-<div id="main-content">
-  <div id="left-sidebar">
-    <ul>
-      <li><a href="main.html">Home</a></li>
-      <li><a>CV</a></li>
-      <li><a>Portfolio</a></li>
-      <li><a>Contact</a></li>
-    </ul>
+<div id="left-sidebar">
+  <ul>
+    <li><a href="main.html">Home</a></li>
+    <li><a>CV</a></li>
+    <li><a>Portfolio</a></li>
+    <li><a>Contact</a></li>
+  </ul>
+</div>
+<div id="title-header">
+  <div class="profile-card">
+    <img id="profile-photo" src="./images/cutmypic.png"></img>
+    <h1 id="title-intro"> Hi,<br/>I'm Paul </h1>
   </div>
-  <div id="content">
-      <h1>Content</h1>
-      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-  </div>
+</div>
+<div id="nextContent" style="background-color:black; display:block;">
+  Hi
 </div>
 </body>
 
