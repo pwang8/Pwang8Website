@@ -25,26 +25,27 @@ body, html {
 */
 div#title-header {
   background-color: #f4f4f4;
-  background-position: center top;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 40%;
+  height: 30%;
   width: 100%;
-  
+  margin:0px;
+  display:inline-flex;
 }
 
 div.profile-card {
-  position: fixed;
-  top: 20%;
+  position: absolute;
+  top: 16%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display:flex;
+  flex-wrap: nowrap;
 }
 
 img#profile-photo {
-  height:200px;
-  width:200px;
-  max-height:200px;
-  max-width:200px;
+  height:180px;
+  width:180px;
+  max-height:180px;
+  max-width:180px;
   display:inline-block;
   float: left;
 }
@@ -52,11 +53,12 @@ img#profile-photo {
 h1#title-intro{
   font-family: MontserratMediumItalic;
   font-weight: normal;
-  font-size: 50px;
+  color: #373737;
+  font-size: 52px;
   display:inline-block;
   float: left;
-  padding: 10px 0px 10px 40px;
-  
+  padding: 30px 0px 20px 40px;
+  white-space: nowrap;
 }
 
 /* Styling used for the Sidebar
@@ -65,7 +67,7 @@ h1#title-intro{
 div#left-sidebar{
   position:fixed;
   z-index:1;
-  top:35px;
+  padding:28px 0px 0px 0px;
   margin:0px;
   left:0;
   min-width: 175px;
@@ -83,11 +85,58 @@ li a {
   color: #373737;
   margin: 0;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
   font-family: MontserratRegular;
 }
 /* Change the link color to #555 (gray) on hover */
 li a:hover {
     font-weight:bold
+}
+
+/*  Line Divider
+ *
+ */
+div.divider{
+  position:absolute;
+  height: 0px;
+  width: 75%;
+  left:12%;
+  border-bottom: 2px solid #373737;
+  overflow: hidden;
+}
+
+/*  Styling for the About Me Page
+ *
+ */
+div#about-me-section{
+  /*background-image: url("./images/mountaincropped.jpg");
+  background-repeat: no-repeat;
+  background-position: center-top;
+  background-size: cover;*/
+  background-color: #f4f4f4;
+  height: 70%;
+  margin:0px;
+}
+div.textbox{
+  display: block;
+  left: 50%;
+  width: 50%;
+  text-align:center;
+  padding: 9% 25% 10% 25%;
+  margin: 0px;
+  border: 0px;
+}
+h6.text-header{
+  font-family: MontserratMediumItalic;
+  font-size: 32px;
+  color: #373737;
+  margin:0px;
+  padding-bottom: 16px;
+}
+p.text-content{
+  font-family: MontserratMediumItalic;
+  font-size: 26px;
+  color: #373737;
+  margin:0px;
 }
