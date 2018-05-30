@@ -67,7 +67,7 @@ h1#title-intro{
 div#left-sidebar{
   position:fixed;
   z-index:1;
-  padding:28px 0px 0px 0px;
+  padding:18px 0px 0px 0px;
   margin:0px;
   left:0;
   min-width: 175px;
@@ -77,7 +77,7 @@ div#left-sidebar{
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 10px 0px;
   overflow: hidden;
 }
 li a {
@@ -116,7 +116,7 @@ div#about-me-section{
   background-repeat: no-repeat;
   background-position: center-top;
   background-size: cover;*/
-  background-color: #f4f4f4;
+  background-color: #3e5c76;
   height: 70%;
   margin:0px;
   padding:0px;
@@ -133,7 +133,7 @@ div.textbox{
 h6.text-header{
   font-family: MontserratMediumItalic;
   font-size: 32px;
-  color: #373737;
+  color: #e0e0e0;
   margin:0px;
   padding:0px;
   padding-bottom: 16px;
@@ -141,7 +141,30 @@ h6.text-header{
 p.text-content{
   font-family: MontserratMediumItalic;
   font-size: 26px;
-  color: #373737;
+  color: #e0e0e0;
   margin:0px;
   padding:0px;
+}
+
+/*  CSS for the resume section
+ *
+ */
+
+div#cv-section{
+  height: 100%;
+  
+}
+div#resume-section{
+  display:block;
+  position:relative;
+  height:100%;
+  width:100%;
+  background-color:#cf5c36;
+}
+#resume-photo{
+  position:relative;
+  max-height: 100%;
+  max-width: 66%;
+  left:50%;
+  transform: translate(-50%, 0%);
 }
