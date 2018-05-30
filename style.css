@@ -4,7 +4,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    background-color: #FFFFFF; /* Temporary to see layout better */
+    background-color: #f4f4f4; /* Temporary to see layout better */
 }
 /*  Contenders for colour schemes:(sidebar then background)
  *  # N/A
@@ -100,10 +100,12 @@ li a:hover {
 div.divider{
   position:absolute;
   height: 0px;
-  width: 75%;
-  left:12%;
+  width: 66%;
+  left:16%;
   border-bottom: 2px solid #373737;
   overflow: hidden;
+  margin:0px;
+  padding:0px;
 }
 
 /*  Styling for the About Me Page
@@ -117,6 +119,7 @@ div#about-me-section{
   background-color: #f4f4f4;
   height: 70%;
   margin:0px;
+  padding:0px;
 }
 div.textbox{
   display: block;
@@ -132,6 +135,7 @@ h6.text-header{
   font-size: 32px;
   color: #373737;
   margin:0px;
+  padding:0px;
   padding-bottom: 16px;
 }
 p.text-content{
@@ -139,4 +143,5 @@ p.text-content{
   font-size: 26px;
   color: #373737;
   margin:0px;
+  padding:0px;
 }
