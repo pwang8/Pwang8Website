@@ -65,7 +65,7 @@ h1#title-intro{
  * 
 */
 div#left-sidebar{
-  position:fixed;
+  position:absolute;
   z-index:1;
   padding:18px 0px 0px 0px;
   margin:0px;
@@ -167,4 +167,24 @@ div#resume-section{
   max-width: 66%;
   left:50%;
   transform: translate(-50%, 0%);
+}
+
+/*  CSS for the Portfolio Section
+ *
+ */
+
+div#portfolio-section{
+  height: 100%;
+  background-color:#FFFFDD;
+  
+}
+
+/*
+ *
+ */
+
+div#contact-section{
+  height:100%;
+  background-color:#84827D;
+  color:blue;
 }
