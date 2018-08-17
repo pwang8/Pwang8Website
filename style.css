@@ -4,7 +4,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    background-color: #f4f4f4; /* Temporary to see layout better */
+    background-color: #f4f4f4;
 }
 /*  Contenders for colour schemes:(sidebar then background)
  *  # N/A
@@ -46,7 +46,7 @@ img#profile-photo {
   width:180px;
   max-height:180px;
   max-width:180px;
-  display:inline-block;
+  display:block;
   float: left;
 }
 
@@ -55,7 +55,7 @@ h1#title-intro{
   font-weight: normal;
   color: #373737;
   font-size: 52px;
-  display:inline-block;
+  display:block;
   float: left;
   padding: 30px 0px 20px 40px;
   white-space: nowrap;
@@ -148,25 +148,70 @@ p.text-content{
 
 /*  CSS for the resume section
  *
+ *  The colour scheme for this page will consist of a paper f4f4f4 background 
+ *  with #cf5c36 dark orange text and a complementary #36A9CF light blue
  */
-
-div#cv-section{
-  height: 100%;
-  
-}
+ 
 div#resume-section{
   display:block;
   position:relative;
-  height:100%;
   width:100%;
-  background-color:#cf5c36;
+  background-color:#3AAFA9;
 }
-#resume-photo{
-  position:relative;
-  max-height: 100%;
-  max-width: 66%;
+div#resume{
+  margin: 0px;
+  padding:0px 0px 50px;
+  font-family: MontserratRegular;
+  color:#17252A;
+  position: relative;
+  max-width: 800px;
   left:50%;
   transform: translate(-50%, 0%);
+  
+}
+.resume-h1{
+  margin:0px;
+  padding: 50px 0px 10px 0px;
+  font-family: MontserratRegular;
+  font-size: 50px;
+  text-align: center;
+}
+.resume-h2{
+  text-align: center;
+  color:#FEFFFF;
+  margin:0;
+  padding: 20px 0px 0px;
+}
+.resume-section-divider{
+  border:0;
+  border-bottom: 2px solid #FEFFFF;
+  margin: 2px 0px 20px;
+  width: 160px;
+  position: relative;
+  left:50%;
+  transform: translate(-50%, 0%);
+}
+.resume-h3{
+  color: #17252A;
+  border:0;
+  margin: 10px 0px;
+  padding:0;
+}
+.resume-h4{
+  border:0;
+  margin: 10px 0px;
+  padding:0;
+  margin-left: 25px;
+}
+.resume-experience-date{
+  float: right;
+}
+.resume-p1{
+  border:0;
+  margin:5px 0px;
+  padding:0;
+  margin-left: 50px;
+  max-width: 700px;
 }
 
 /*  CSS for the Portfolio Section
@@ -174,9 +219,9 @@ div#resume-section{
  */
 
 div#portfolio-section{
-  height: 100%;
+  display:block;
+  height: 30%;
   background-color:#FFFFDD;
-  
 }
 
 /*
@@ -184,7 +229,8 @@ div#portfolio-section{
  */
 
 div#contact-section{
-  height:100%;
+  display:block;
+  height:30%;
   background-color:#84827D;
   color:blue;
 }
