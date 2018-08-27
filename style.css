@@ -220,17 +220,60 @@ div#resume{
 
 div#portfolio-section{
   display:block;
-  height: 30%;
-  background-color:#FFFFDD;
+  min-height: 50%;
+  background-color:#9dd5e8;
+  color: #36454F;
+}
+#portfolio-section h1, h2{
+  font-family: MontserratRegular;
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+#portfolio-section h1{
+  padding: 50px 0px 10px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+#portfolio-section h2{
+  text-align: center;
+  color:#cf5c36;
+  margin:0;
+  padding: 20px 0px 0px;
+}
+#cutepuppydistraction{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0px;
 }
 
-/*
+/*  Contact section
  *
  */
 
 div#contact-section{
   display:block;
-  height:30%;
-  background-color:#84827D;
-  color:blue;
+  min-height:30%;
+  background-color:#D3FFF3;
+  color:#36454F;
+}
+#contact-section p, h1, h2{
+  font-family: MontserratRegular;
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+#contact-section h1{
+  text-align: center;
+  padding: 50px 0px 25px;
+}
+#contact-section h2{
+  text-align: center;
+  color: #E94F37;
+}
+#contact-section p{
+  text-align: center;
+  font-size: 20px;
+  padding: 0px 0px 20px;
 }
