@@ -1,93 +1,97 @@
 <!DOCTYPE html>
 <html>
-<!-- TODO List:
-  Mostly just design ideas along with actual content population
-  -Consider full screen image at the start, with animation when you scroll down to see the rest of the website(the content with the sidebar)
-  -Consider adding symbols to the sidebar, although i really don't like the idea so probably gonna scrap this idea lol
-  -figure out how to not have the main body be stretched super wide(when full screen). There's so much white space and the text should not have to cover everything
--->
 <head>
 <meta charset="UTF-8">
-<title>Paul Wang</title>
-<link rel="shortcut icon" type="image/x-icon" href="./images/titleicon.png"/>
-<link rel="stylesheet" type="text/css" href="style.css">
+<title>PaulWang</title>
 <script src="./js/jquery-3.3.1.js"></script>
 <script src="./js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/style1.css">
+<link rel="stylesheet" type="text/css" href="./css/animate.css">
+<link rel="shortcut icon" type="image/x-icon" href="./images/titleicon.png"/>
 </head>
 <body>
-<div id="title-header">
-  <div id="left-sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#resume-section">CV</a></li>
-      <li><a href="#portfolio-section">Portfolio</a></li>
-      <li><a href="#contact-section">Contact</a></li>
-    </ul>
+<div id="container">
+  <header id="landing" class="fadeIn animated">
+    <div id="landing-title">
+      <h1 id="landing-title-name" class="fadeIn animated animation-delay-500">Paul Wang</h1>
+      <div id="landing-link-section" class="pulse animated animation-delay-1200">
+        <a href="#resume-section" class="landing-button"><b>Resume</b></a>
+        <a href="http://www.github.com/pwang8" class="landing-button"><b>Github</b></a>
+        <a href="https://www.linkedin.com/in/pwang8/" class="landing-button"><b>LinkedIn</b></a>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div id="left-sidebar">
+      <ul>
+        <li><img id="profile-photo" src="./images/cutmypic.png"></img></li>
+        <li><a href="#landing">Home</a></li>
+        <li><a href="#about-me-section">About Me</a></li>
+        <li><a href="#resume-section">Resume</a></li>
+        <li><a href="#portfolio-section">Portfolio</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <div id="about-me-section" class="content-section">
+        <div class="textbox">
+          <h6 class="text-header">Paul Wang</h6>
+          <p class="text-content">I'm a student currently studying Computer Science at the University of Calgary. I chose to make this site to use as a platform to display some of my work. Feel free to look around and of course, feedback is always welcome :). **This website is a work in progress and is currently missing a lot of content </p>
+        </div>
+      </div>
+      <div id="resume-section" class="content-section">
+        <!--img id="resume-photo" src="./images/resume.jpg"></img-->
+        <div id="resume">
+          <h1 class="resume-h1">Resume</h1>
+          <h2 class="resume-h2">Education</h2>
+          <!--hr class="resume-section-divider"-->
+            <h3 class="resume-h3">University of Calgary</h3>
+            <h4 class="resume-h4">Bachelor of Science in Computer Science, expected April 2019</h4>
+          <h2 class="resume-h2">Experience</h2>
+          <!--hr class="resume-section-divider"-->
+            <h3 class="resume-h3">Alberta Distance Learning Center</h3>
+            <span class="resume-experience-date">Jan.2016-Oct.2017</span>
+              <h4 class="resume-h4">Interactive Web Developer</h4>
+              <p class="resume-p1">Used HTML, CSS, and Javascript to develop learning tools to aid students K-12 in their online courses.</p>
+              <p class="resume-p1">Worked in collaboration with teachers, gathering requirements, to meet both technical specifications and teaching needs.</p>
+            <h3 class="resume-h3">University of Calgary Solar Car Team</h3>
+            <span class="resume-experience-date">Sept.2015-May.2016</span>
+              <h4 class="resume-h4">Software Team Member</h4>
+              <p class="resume-p1">Using C++, rebuilt software with proper architecture to better support later development.</p>
+              <p class="resume-p1">Practiced proper coding habits and learned version control to efficiently collaborate with team members.</p>
+            <h3 class="resume-h3">ATB Financial</h3>
+            <span class="resume-experience-date">May.2015-Aug.2015</span>
+              <h4 class="resume-h4">Junior Java Developer</h4>
+              <p class="resume-p1">Worked with the portal team developing applications to increase company efficiency.</p>
+              <p class="resume-p1">Worked with SAP UI5 and established skills in HTML, CSS, and JS.</p>
+            <h3 class="resume-h3">Apple Retail</h3>
+            <span class="resume-experience-date">Feb.2014-Apr.2015</span>
+              <h4 class="resume-h4">Specialist</h4>
+              <p class="resume-p1">Worked with customers, developed strong interpersonal communication skills.</p>
+          <h2 class="resume-h2">Skills</h2>
+          <!--hr class="resume-section-divider"-->
+            <p class="resume-p1">Comfortable with <b>Java</b>, <b>C++</b>, <b>Python</b>, <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b></p>
+            <p class="resume-p1">Proficient with <b>Haskell</b>, <b>Prolog</b>, <b>PHP</b>, <b>SQL</b>, and <b>Assembly Programming</b></p>
+            <p class="resume-p1">Comfortable using <b>Git</b></p>
+            <p class="resume-p1">Strong understanding of both database management and software engineering concepts</p>
+            <p class="resume-p1">Familiar with Object Oriented, Logical, Functional and Dynamic Programming</p>
+        </div>
+      </div>
+      <div id="portfolio-section" class="content-section">
+        <h1>My Projects</h1>
+        <h2>Currently working on importing my projects to this web page, sit tight there will be content soon!</h2>
+        <h2>In the meantime, enjoy a picture of this adorable puppy</h2>
+        <img id="cutepuppydistraction" src="./images/Cute-puppy.jpg"></img>
+      </div>
+      <div id="contact-section" class="content-section">
+        <h1>Contact</h1>
+        <h2>Email</h2>
+        <!--a class="contact-p" href="mailto:p.wang8@outlook.com">p.wang8@outlook.com</a-->
+        <p>p.wang8@outlook.com</p>
+        <h2>Phone</h2>
+        <p>403.890.5609</p>
+      </div>
+    </div>
   </div>
-  <div class="profile-card">
-    <img id="profile-photo" src="./images/cutmypic.png"></img>
-    <h1 id="title-intro"> Paul Wang </h1>
-  </div>
-</div>
-<!--div class="divider">M
-</div-->
-<div id="about-me-section">
-  <div class="textbox">
-    <h6 class="text-header">Hi, I'm Paul!</h6>
-    <p class="text-content">I'm a student currently studying Computer Science at the University of Calgary. I chose to make this site to use as a platform to display some of my work. Feel free to look around and of course, feedback is always welcome :). **This website is a work in progress and is currently missing a lot of content </p>
-  </div>
-</div>
-<div id="resume-section">
-  <!--img id="resume-photo" src="./images/resume.jpg"></img-->
-  <div id="resume">
-    <h1 class="resume-h1">Resume</h1>
-    <h2 class="resume-h2">Education</h2>
-    <!--hr class="resume-section-divider"-->
-      <h3 class="resume-h3">University of Calgary</h3>
-      <h4 class="resume-h4">Bachelor of Science in Computer Science, expected April 2019</h4>
-    <h2 class="resume-h2">Experience</h2>
-    <!--hr class="resume-section-divider"-->
-      <h3 class="resume-h3">Alberta Distance Learning Center</h3>
-      <span class="resume-experience-date">Jan.2016-Oct.2017</span>
-        <h4 class="resume-h4">Interactive Web Developer</h4>
-        <p class="resume-p1">Used HTML, CSS, and Javascript to develop learning tools to aid students K-12 in their online courses.</p>
-        <p class="resume-p1">Worked in collaboration with teachers, gathering requirements, to meet both technical specifications and teaching needs.</p>
-      <h3 class="resume-h3">University of Calgary Solar Car Team</h3>
-      <span class="resume-experience-date">Sept.2015-May.2016</span>
-        <h4 class="resume-h4">Software Team Member</h4>
-        <p class="resume-p1">Using C++, rebuilt software with proper architecture to better support later development.</p>
-        <p class="resume-p1">Practiced proper coding habits and learned version control to efficiently collaborate with team members.</p>
-      <h3 class="resume-h3">ATB Financial</h3>
-      <span class="resume-experience-date">May.2015-Aug.2015</span>
-        <h4 class="resume-h4">Junior Java Developer</h4>
-        <p class="resume-p1">Worked with the portal team developing applications to increase company efficiency.</p>
-        <p class="resume-p1">Worked with SAP UI5 and established skills in HTML, CSS, and JS.</p>
-      <h3 class="resume-h3">Apple Retail</h3>
-      <span class="resume-experience-date">Feb.2014-Apr.2015</span>
-        <h4 class="resume-h4">Specialist</h4>
-        <p class="resume-p1">Worked with customers, developed strong interpersonal communication skills.</p>
-    <h2 class="resume-h2">Skills</h2>
-    <!--hr class="resume-section-divider"-->
-      <p class="resume-p1">Comfortable with <b>Java</b>, <b>C++</b>, <b>Python</b>, <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b></p>
-      <p class="resume-p1">Proficient with <b>Haskell</b>, <b>Prolog</b>, <b>PHP</b>, <b>SQL</b>, and <b>Assembly Programming</b></p>
-      <p class="resume-p1">Comfortable using <b>Git</b></p>
-      <p class="resume-p1">Strong understanding of both database management and software engineering concepts</p>
-      <p class="resume-p1">Familiar with Object Oriented, Logical, Functional and Dynamic Programming</p>
-  </div>
-</div>
-<div id="portfolio-section">
-  <h1>My Projects</h1>
-  <h2>Currently working on importing my projects to this web page, sit tight there will be content soon!</h2>
-  <h2>In the meantime, enjoy a picture of this adorable puppy</h2>
-  <img id="cutepuppydistraction" src="./images/Cute-puppy.jpg"></img>
-</div>
-<div id="contact-section">
-  <h1>Contact</h1>
-  <h2>Email</h2>
-  <!--a class="contact-p" href="mailto:p.wang8@outlook.com">p.wang8@outlook.com</a-->
-  <p>p.wang8@outlook.com</p>
-  <h2>Phone</h2>
-  <p>403.890.5609</p>
 </div>
 </body>
 

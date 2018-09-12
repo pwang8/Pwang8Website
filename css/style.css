@@ -1,0 +1,279 @@
+/*  General CSS
+ *
+ */
+ body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+/*  Contenders for colour schemes:(sidebar then background)
+ *  # N/A
+ *  #8FB5A5 light blue
+ *  bccbcd fog blue for background
+*/
+
+/*  Font imports
+ *
+ */
+@font-face { font-family: Oswald; src: url('./fonts/Oswald/Oswald-Regular.ttf');}
+@font-face { font-family: Signika; src: url('./fonts/Signika/Signika-Regular.ttf');}
+@font-face { font-family: MontserratMediumItalic; src: url('./fonts/Montserrat/Montserrat-MediumItalic.ttf');}
+@font-face { font-family: MontserratRegular; src: url('./fonts/Montserrat/Montserrat-Regular.ttf');}
+
+/* Header Page Style
+ * 373737 charcoal, f4f4f4 paper
+*/
+div#title-header {
+  background-color: #f4f4f4;
+  background-size: cover;
+  height: 30%;
+  width: 100%;
+  margin:0px;
+  display:inline-flex;
+}
+
+div.profile-card {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display:flex;
+  flex-wrap: nowrap;
+}
+
+img#profile-photo {
+  height:180px;
+  width:180px;
+  max-height:180px;
+  max-width:180px;
+  display:block;
+  float: left;
+}
+
+h1#title-intro{
+  font-family: MontserratMediumItalic;
+  font-weight: normal;
+  color: #373737;
+  font-size: 52px;
+  display:block;
+  float: left;
+  padding: 30px 0px 20px 40px;
+  white-space: nowrap;
+}
+
+/* Styling used for the Sidebar
+ * 
+*/
+div#left-sidebar{
+  position:absolute;
+  z-index:1;
+  padding:18px 0px 0px 0px;
+  margin:0px;
+  left:0;
+  min-width: 175px;
+  width:175px;
+  overflow:hidden;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0px;
+  overflow: hidden;
+}
+li a {
+  display: block;
+  color: #373737;
+  margin: 0;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: MontserratRegular;
+}
+/* Change the link color to #555 (gray) on hover */
+li a:hover {
+    font-weight:bold
+}
+
+/*  Line Divider
+ *
+ */
+div.divider{
+  position:absolute;
+  height: 0px;
+  width: 66%;
+  left:16%;
+  border-bottom: 2px solid #373737;
+  overflow: hidden;
+  margin:0px;
+  padding:0px;
+}
+
+/*  Styling for the About Me Page
+ *
+ */
+div#about-me-section{
+  /*background-image: url("./images/mountaincropped.jpg");
+  background-repeat: no-repeat;
+  background-position: center-top;
+  background-size: cover;*/
+  background-color: #3e5c76;
+  height: 70%;
+  margin:0px;
+  padding:0px;
+}
+div.textbox{
+  display: block;
+  left: 50%;
+  width: 50%;
+  text-align:center;
+  padding: 9% 25% 10% 25%;
+  margin: 0px;
+  border: 0px;
+}
+h6.text-header{
+  font-family: MontserratMediumItalic;
+  font-size: 32px;
+  color: #e0e0e0;
+  margin:0px;
+  padding:0px;
+  padding-bottom: 16px;
+}
+p.text-content{
+  font-family: MontserratMediumItalic;
+  font-size: 26px;
+  color: #e0e0e0;
+  margin:0px;
+  padding:0px;
+}
+
+/*  CSS for the resume section
+ *
+ *  The colour scheme for this page will consist of a paper f4f4f4 background 
+ *  with #cf5c36 dark orange text and a complementary #36A9CF light blue
+ */
+ 
+div#resume-section{
+  display:block;
+  position:relative;
+  width:100%;
+  background-color:#3AAFA9;
+}
+div#resume{
+  margin: 0px;
+  padding:0px 0px 50px;
+  font-family: MontserratRegular;
+  color:#17252A;
+  position: relative;
+  max-width: 800px;
+  left:50%;
+  transform: translate(-50%, 0%);
+  
+}
+.resume-h1{
+  margin:0px;
+  padding: 50px 0px 10px 0px;
+  font-family: MontserratRegular;
+  font-size: 50px;
+  text-align: center;
+}
+.resume-h2{
+  text-align: center;
+  color:#FEFFFF;
+  margin:0;
+  padding: 20px 0px 0px;
+}
+.resume-section-divider{
+  border:0;
+  border-bottom: 2px solid #FEFFFF;
+  margin: 2px 0px 20px;
+  width: 160px;
+  position: relative;
+  left:50%;
+  transform: translate(-50%, 0%);
+}
+.resume-h3{
+  color: #17252A;
+  border:0;
+  margin: 10px 0px;
+  padding:0;
+}
+.resume-h4{
+  border:0;
+  margin: 10px 0px;
+  padding:0;
+  margin-left: 25px;
+}
+.resume-experience-date{
+  float: right;
+}
+.resume-p1{
+  border:0;
+  margin:5px 0px;
+  padding:0;
+  margin-left: 50px;
+  max-width: 700px;
+}
+
+/*  CSS for the Portfolio Section
+ *
+ */
+
+div#portfolio-section{
+  display:block;
+  min-height: 50%;
+  background-color:#9dd5e8;
+  color: #36454F;
+}
+#portfolio-section h1, h2{
+  font-family: MontserratRegular;
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+#portfolio-section h1{
+  padding: 50px 0px 10px 0px;
+  font-size: 40px;
+  text-align: center;
+}
+#portfolio-section h2{
+  text-align: center;
+  color:#cf5c36;
+  margin:0;
+  padding: 20px 0px 0px;
+}
+#cutepuppydistraction{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0px;
+}
+
+/*  Contact section
+ *
+ */
+
+div#contact-section{
+  display:block;
+  min-height:30%;
+  background-color:#D3FFF3;
+  color:#36454F;
+}
+#contact-section p, h1, h2{
+  font-family: MontserratRegular;
+  border:0px;
+  margin:0px;
+  padding:0px;
+}
+#contact-section h1{
+  text-align: center;
+  padding: 25px 0px 25px;
+}
+#contact-section h2{
+  text-align: center;
+  color: #E94F37;
+}
+#contact-section p{
+  text-align: center;
+  font-size: 20px;
+  padding: 0px 0px 20px;
+}
