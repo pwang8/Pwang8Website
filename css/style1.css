@@ -153,6 +153,16 @@ img#profile-photo {
   font-size: 16px;
   margin: 5px 0px;
 }
+.contact-p{
+  font-size: 16px;
+  margin: 5px 0px;
+  text-decoration: none;
+  color: #373737;
+}
+.contact-p:hover{
+  color: blue;
+  text-decoration: underline;
+}
 .resume-experience-date{
   float:right;
   margin-right: 100px;
