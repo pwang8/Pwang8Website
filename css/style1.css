@@ -21,6 +21,10 @@
 *   Amazing Photo Credits to: Stefan Stefancik from Pexels
 */
 header#landing{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
   background-image: url('../images/compressed-landing-pic.jpg');
   height: 100vh;
   background-size: cover;
@@ -114,6 +118,45 @@ img#profile-photo {
 *
 */
 #content{
-  /*margin: -100vh 0px 0px 250px;*/
-  
+  display: flex;
+  flex-direction: column;
+  color: #373737;
+  background-color: #f4f4f4;
+  font-family: MontserratRegular;
+}
+.content-section{
+  text-align: left;
+  padding: 25px;
+  min-height: 100vh;
+  max-width: 90%;
+}
+#content h1{
+  font-size: 48px;
+  margin: 70px 0px 50px;
+}
+#content h2{
+  font-size: 32px;
+  margin: 20px 0px 7px;
+}
+#content h3{
+  font-size: 20px;
+  margin: 20px 0px 3px;
+}
+#content h4{
+  font-size: 16px;
+}
+#content p{
+  font-size: 16px;
+  margin: 5px 0px;
+}
+.resume-experience-date{
+  float:right;
+  margin-right: 100px;
+}
+
+/*  Misc.
+ *
+ */
+#cutepuppydistraction{
+  max-width: 100px;
 }
