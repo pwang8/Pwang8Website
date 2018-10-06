@@ -33,3 +33,13 @@ $(document).ready(function(){
 window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
+
+// window loader, add animation after loading screen disappears
+$(window).on('load', function() {
+      // Animate loader off screen
+      $(".se-pre-con").fadeOut("slow");
+      $("landing").addClass("fadeIn animated");
+      $("#landing-title-name").addClass("fadeIn animated animation-delay-500");
+      $("#landing-link-section").addClass("pulse animated animation-delay-1200");
+
+});
