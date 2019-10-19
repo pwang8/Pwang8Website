@@ -72,29 +72,6 @@ div#landing-title h2{
   padding: 10px;
 }
 
-
-div#content-link-section a{
-  text-decoration: none;
-  margin-top: 20px;
-  align-items: right;
-}
-img#content-github-button {
-  color: #f4f4f4;
-  width: 38px;
-  height: 36px;
-  padding: 3px;
-  border: #f4f4f4 1px solid;
-  border-radius: 5px;
-}
-img#content-linkedin-button {
-  color: #f4f4f4;
-  width: 45px;
-  height: 36px;
-  padding: 3px;
-  border: #f4f4f4 1px solid;
-  border-radius: 5px;
-}
-
 .animation-delay-500 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
@@ -120,15 +97,14 @@ div#left-sidebar{
     top: 0px;
     background-color: #3e5c76;
     height: 100vh;
-    min-width: 200px;
-    max-width: 200px;
+    width: 300px;
     z-index: 1;
     display: flex;
     flex-direction: column;
   }
 img#profile-photo {
-    left: 20%;
-    max-width:60%;
+    left: 12%;
+    max-width:80%;
     margin-bottom: 10px;
     position: relative;
   }
@@ -166,6 +142,27 @@ img#profile-photo {
   padding: 25px;
   min-height: 100vh;
   max-width: 90%;
+}
+div#content-link-section a{
+  text-decoration: none;
+  margin-top: 20px;
+  align-items: right;
+}
+img#content-github-button {
+  color: #f4f4f4;
+  width: 38px;
+  height: 36px;
+  padding: 3px;
+  border: #f4f4f4 1px solid;
+  border-radius: 5px;
+}
+img#content-linkedin-button {
+  color: #f4f4f4;
+  width: 45px;
+  height: 36px;
+  padding: 3px;
+  border: #f4f4f4 1px solid;
+  border-radius: 5px;
 }
 #content h1{
   font-size: 48px;
