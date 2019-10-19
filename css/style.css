@@ -2,7 +2,7 @@
  *
  */
 @font-face { font-family: MontserratMediumItalic; src: url('../fonts/Montserrat/Montserrat-MediumItalic.ttf');}
-@font-face { font-family: MontserratRegular; src: url('../fonts/Montserrat/Montserrat-Regular.ttf');} 
+@font-face { font-family: MontserratRegular; src: url('../fonts/Montserrat/Montserrat-Regular.ttf');}
 
 /*  General CSS
  *
@@ -39,7 +39,7 @@
 *   Amazing Photo Credits to: Stefan Stefancik from Pexels
 */
 header#landing{
-  -webkit-user-select: none; /* Safari */        
+  -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
@@ -67,15 +67,30 @@ div#landing-title h1{
   font-size: 10vh;
   padding: 20px;
 }
-div#landing-link-section a{
+
+
+div#content-link-section a{
   text-decoration: none;
-  color: #f4f4f4;
-  border: #f4f4f4 1px solid;
-  padding: 10px 20px;
-  border-radius: 10px;
   margin-top: 20px;
-  font-size: 2.4vh;
+  align-items: right;
 }
+img#content-github-button {
+  color: #f4f4f4;
+  width: 38px;
+  height: 36px;
+  padding: 3px;
+  border: #f4f4f4 1px solid;
+  border-radius: 5px;
+}
+img#content-linkedin-button {
+  color: #f4f4f4;
+  width: 45px;
+  height: 36px;
+  padding: 3px;
+  border: #f4f4f4 1px solid;
+  border-radius: 5px;
+}
+
 .animation-delay-500 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
@@ -90,11 +105,10 @@ div#landing-link-section a{
 */
 div.wrapper{
   display:flex;
-  
 }
 
 /* Styling used for the Sidebar
- * 
+ *
 */
 div#left-sidebar{
     position: -webkit-sticky;
