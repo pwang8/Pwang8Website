@@ -67,6 +67,10 @@ div#landing-title h1{
   font-size: 10vh;
   padding: 20px;
 }
+div#landing-title h2{
+  font-size: 3vh;
+  padding: 10px;
+}
 
 
 div#content-link-section a{

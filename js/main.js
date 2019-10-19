@@ -28,8 +28,8 @@ $(document).ready(function(){
 });
 
 /**   Otherwise people won't see my beautiful landing page on refresh :(
- *
- */
+*
+*/
 window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }
@@ -40,6 +40,6 @@ $(window).on('load', function() {
       $(".se-pre-con").fadeOut("slow");
       $("landing").addClass("fadeIn animated");
       $("#landing-title-name").addClass("fadeIn animated animation-delay-500");
-      //$("#landing-link-section").addClass("pulse animated animation-delay-1200");
+      $("#landing-title-quote").addClass("fadeIn animated animation-delay-1200");
 
 });
