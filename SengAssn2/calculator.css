@@ -1,0 +1,68 @@
+/* Desktop Css by Default*/
+div#calculator{
+    max-width: 600px;
+    border: 1px solid gray;
+    background-color: #FFFFFF;
+}
+
+#previousExpressionLabel:disabled {
+    width: 550px;
+    height: 25px;
+    color: #3E4354;
+    background-color: white;
+    text-align: right;
+    border: none;
+}
+
+#resultBox {
+    width: 550px;
+    height: 40px;
+    max-width: 550px;
+    color: #3E4354;
+    text-align: right;
+}
+
+#calculatorButtons {
+    display: block;
+    max-width: 550px;
+}
+
+button.calculatorButton {
+    border: none;
+    width: 125px;
+    height: 40px;
+    margin: 5px;
+    color: #3E4354;
+    background-color: #E0E1E5;
+    text-decoration: none;
+}
+
+button.calculatorButton#equalsButton {
+    color: #FFFFFF;
+    background-color: #4286F4;
+}
+
+div#wrapper{
+    margin:20px;
+}
+
+/* For Mobile, including Tablets and Cellphones both */
+@media screen and (max-device-width:991px)
+{
+    div#calculator{
+        width: 1vw;
+    }
+
+    #previousExpressionLabel:disabled {
+        width: 0.916vw;
+    }
+
+    #resultBox {
+        width: 0.916vw;
+    }
+
+    button.calculatorButton {
+        width: 0.2083vw;
+        margin: 0.0083vw;
+    }
+}

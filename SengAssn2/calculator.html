@@ -7,39 +7,45 @@
         <link rel="stylesheet" type="text/css" href="calculator.css"/>
     </head>
     <body>
-        <div id="calclator">
-            <table>
-                <tr>
-                    <td><button type="button" class="calculatorButton" id="leftBracketButton" value="("></button></td>
-                    <td><button type="button" class="calculatorButton" id="rightBracketButton" value=")"></button></td>
-                    <td><button type="button" class="calculatorButton" id="clearButton" value="C"></button></td>
-                    <td><button type="button" class="calculatorButton" id="clearEntryButton" value="CE"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="calculatorButton" id="sevenButton" value="7"></button></td>
-                    <td><button type="button" class="calculatorButton" id="eightButton" value="8"></button></td>
-                    <td><button type="button" class="calculatorButton" id="nineButton" value="9"></button></td>
-                    <td><button type="button" class="calculatorButton" id="divideButton" value="/"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="calculatorButton" id="fourButton" value="4"></button></td>
-                    <td><button type="button" class="calculatorButton" id="fiveButton" value="5"></button></td>
-                    <td><button type="button" class="calculatorButton" id="sixButton" value="6"></button></td>
-                    <td><button type="button" class="calculatorButton" id="multiplyButton" value="*"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="calculatorButton" id="oneButton" value="1"></button></td>
-                    <td><button type="button" class="calculatorButton" id="twoButton" value="2"></button></td>
-                    <td><button type="button" class="calculatorButton" id="threeButton" value="3"></button></td>
-                    <td><button type="button" class="calculatorButton" id="subtractButton" value="-"></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="calculatorButton" id="zeroButton" value="0"></button></td>
-                    <td><button type="button" class="calculatorButton" id="decimalButton" value="."></button></td>
-                    <td><button type="button" class="calculatorButton" id="equalsButton" value="="></button></td>
-                    <td><button type="button" class="calculatorButton" id="additionButton" value="+"></button></td>
-                </tr>
-            </table>
+        <div id="calculator">
+            <div id="wrapper">
+                <div id="terminal">
+                    <input type="text" id="previousExpressionLabel" value="0" disabled="disabled" readonly>
+                    <input type="text" id="resultBox" value="0" readonly>
+                </div>
+                <table id="calculatorButtons">
+                    <tr>
+                        <td><button type="button" class="calculatorButton" id="leftBracketButton" onclick="receiveInput('(')">(</button></td>
+                        <td><button type="button" class="calculatorButton" id="rightBracketButton" onclick="receiveInput(')')">)</button></td>
+                        <td><button type="button" class="calculatorButton" id="clearButton" onclick="clearExpression()">C</button></td>
+                        <td><button type="button" class="calculatorButton" id="clearEntryButton" onclick="clearEntry()">CE</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculatorButton" id="sevenButton" onclick="receiveInput('7')">7</button></td>
+                        <td><button type="button" class="calculatorButton" id="eightButton" onclick="receiveInput('8')">8</button></td>
+                        <td><button type="button" class="calculatorButton" id="nineButton" onclick="receiveInput('9')">9</button></td>
+                        <td><button type="button" class="calculatorButton" id="divideButton" onclick="receiveInput('/')">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculatorButton" id="fourButton" onclick="receiveInput('4')">4</button></td>
+                        <td><button type="button" class="calculatorButton" id="fiveButton" onclick="receiveInput('5')">5</button></td>
+                        <td><button type="button" class="calculatorButton" id="sixButton" onclick="receiveInput('6')">6</button></td>
+                        <td><button type="button" class="calculatorButton" id="multiplyButton" onclick="receiveInput('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculatorButton" id="oneButton" onclick="receiveInput('1')">1</button></td>
+                        <td><button type="button" class="calculatorButton" id="twoButton" onclick="receiveInput('2')">2</button></td>
+                        <td><button type="button" class="calculatorButton" id="threeButton" onclick="receiveInput('3')">3</button></td>
+                        <td><button type="button" class="calculatorButton" id="subtractButton" onclick="receiveInput('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculatorButton" id="zeroButton" onclick="receiveInput('0')">0</button></td>
+                        <td><button type="button" class="calculatorButton" id="decimalButton" onclick="receiveInput('.')">.</button></td>
+                        <td><button type="button" class="calculatorButton" id="equalsButton" onclick="evaluateExpression()">=</button></td>
+                        <td><button type="button" class="calculatorButton" id="additionButton" onclick="receiveInput('+')">+</button></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>
