@@ -50,19 +50,50 @@ div#wrapper{
 @media screen and (max-device-width:991px)
 {
     div#calculator{
-        width: 100%;
+        width: 58vw;
+        margin: 0;
+        border: 1px solid gray;
+        background-color: #FFFFFF;
+        position: absolute;
     }
-
+    
     #previousExpressionLabel:disabled {
-        width: 91.6%;
+        width: 57vw;
+        height: 25px;
+        color: #3E4354;
+        background-color: white;
+        text-align: right;
+        border: none;
     }
-
+    
     #resultBox {
-        width: 91.6%;
+        width: 55vw;
+        height: 40px;
+        max-width: 57vw;
+        color: #3E4354;
+        text-align: right;
     }
-
+    
+    #calculatorButtons {
+        display: block;
+        max-width: 57vw;
+    }
+    
     button.calculatorButton {
-        width: 20.83%;
-        margin: 00.83%;
+        border: none;
+        width: 10vw;
+        height: 40px;
+        color: #3E4354;
+        background-color: #E0E1E5;
+        text-decoration: none;
+    }
+    
+    button.calculatorButton#equalsButton {
+        color: #FFFFFF;
+        background-color: #4286F4;
+    }
+    
+    div#wrapper{
+        margin:0px;
     }
 }
