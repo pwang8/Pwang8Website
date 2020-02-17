@@ -1,9 +1,15 @@
 let g_expression = "";
 
 function receiveInput(inputValue){
-    //TODO replace operator if 2 in a row
     let currentValue = document.getElementById("resultBox").value;
-    if(currentValue === "0"){
+    if(isOperator(inputValue) && isOperator(currentValue.substring(currentValue.length-1,currentValue.length))){
+        let value = document.getElementById("resultBox").value;
+        value = value.substring(0,value.length-1);
+        value = value+inputValue;
+        document.getElementById("resultBox").value = value;
+        g_expression = value;
+    }
+    else if(currentValue === "0"){
         document.getElementById("resultBox").value = inputValue;
         g_expression = inputValue;
     }
@@ -68,9 +74,9 @@ function evaluateExpression(){
         result = evaluate(expression);
     }
     catch(e){
-        console.log(e)
         expressionLabel.value = g_expression+"=ERROR";
         resultBox = "ERROR";
+        return;
     }
     expressionLabel.value = g_expression;
     resultBox.value = result;
@@ -84,9 +90,7 @@ function evaluate(p_expression){
     //Mult/Div
     let i = 0;
     while(i < expression.length){
-        console.log(i);
         let c = expression.substring(i,i+1);
-        console.log(c);
         if(isOperator(c)){
             if(c === "*"){
                 let startIndex = -1;
@@ -111,14 +115,10 @@ function evaluate(p_expression){
                     }
                     j++;
                 }
-                console.log("Num1/Num2 " + num1 + " = " + num2 );
                 if(isNumber(num1) && isNumber(num2)){
                     let temp_result = Number(num1) * Number(num2);
-                    console.log("tempResult = " + temp_result);
                     expression = expression.replace( expression.substring(startIndex,endIndex+1) , temp_result );
-                    console.log("expression = " + expression);
                     if(!isNumber(expression)){
-                        console.log("recursion time");
                         expression = evaluate(expression);
                     }
                 }
@@ -148,12 +148,8 @@ function evaluate(p_expression){
                 }
                 if(isNumber(num1) && isNumber(num2)){
                     let temp_result = Number(num1) / Number(num2);
-                    console.log("Num1/Num2 " + num1 + " = " + num2 );
-                    console.log("tempResult = " + temp_result);
                     expression = expression.replace( expression.substring(startIndex,endIndex+1) , temp_result );
-                    console.log("expression = " + expression);
                     if(!isNumber(expression)){
-                        console.log("recursion time");
                         expression = evaluate(expression);
                     }
                 }
@@ -165,7 +161,6 @@ function evaluate(p_expression){
     //Add/Subtract
     i = 0;
     while(i < expression.length){
-        console.log(i);
         let c = expression.substring(i,i+1);
         if(isOperator(c)){
             if(c === "+"){
@@ -193,12 +188,8 @@ function evaluate(p_expression){
                 }
                 if(isNumber(num1) && isNumber(num2)){
                     let temp_result = Number(num1) + Number(num2);
-                    console.log("Num1/Num2 " + num1 + " = " + num2 );
-                    console.log("tempResult = " + temp_result);
                     expression = expression.replace( expression.substring(startIndex,endIndex+1) , temp_result );
-                    console.log("expression = " + expression);
                     if(!isNumber(expression)){
-                        console.log("recursion time");
                         expression = evaluate(expression);
                     }
                 }
@@ -228,12 +219,8 @@ function evaluate(p_expression){
                 }
                 if(isNumber(num1) && isNumber(num2)){
                     let temp_result = Number(num1) - Number(num2);
-                    console.log("Num1/Num2 " + num1 + " = " + num2 );
-                    console.log("tempResult = " + temp_result);
                     expression = expression.replace( expression.substring(startIndex,endIndex+1) , temp_result );
-                    console.log("expression = " + expression);
                     if(!isNumber(expression)){
-                        console.log("recursion time");
                         expression = evaluate(expression);
                     }
                 }
