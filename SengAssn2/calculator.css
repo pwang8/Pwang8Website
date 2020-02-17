@@ -50,19 +50,19 @@ div#wrapper{
 @media screen and (max-device-width:991px)
 {
     div#calculator{
-        width: 1vw;
+        width: 100%;
     }
 
     #previousExpressionLabel:disabled {
-        width: 0.916vw;
+        width: 91.6%;
     }
 
     #resultBox {
-        width: 0.916vw;
+        width: 91.6%;
     }
 
     button.calculatorButton {
-        width: 0.2083vw;
-        margin: 0.0083vw;
+        width: 20.83%;
+        margin: 00.83%;
     }
 }
