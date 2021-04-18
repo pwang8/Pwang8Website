@@ -5,7 +5,6 @@ class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
     const github = this.props.data.github;
     const name = this.props.data.name;
     const description = this.props.data.description;
@@ -67,7 +66,7 @@ class Header extends Component {
             <h3>{description}.</h3>
             <hr />
             <ul className="social">
-              <a href={project} className="button btn project-btn">
+              <a href="#portfolio" className="button btn project-btn smoothscroll">
                 <i className="fa fa-book"></i>Project
               </a>
               <a href={github} className="button btn github-btn">

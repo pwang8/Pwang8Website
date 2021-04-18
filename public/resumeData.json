@@ -8,7 +8,6 @@
     "email": "p.wang8@outlook.com",
     "phone": "403-890-5609",
     "github":"https://github.com/pwang8",
-    "project":"https://www.google.ca", 
     "address":{
       "street":"5859 Dalcastle Dr. NW",
       "city":"Calgary",
@@ -100,7 +99,7 @@
   "portfolio":{
     "projects": [
       {
-        "title":"WIP",
+        "title":"Placeholder Project Name",
         "category":"1",
         "image":"01.jpg",
         "url":"https://www.paulwang.ca"
