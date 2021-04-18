@@ -18,8 +18,8 @@ class Header extends Component {
       random: 5,
       alpha: [0.8,0.5],
       v: [0,0],
-      life: [5,6],
-      f: [0, 1],
+      life: [5,7],
+      f: [0, 0.6],
     }
 
     return (
@@ -55,13 +55,7 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
-            </li>
-            
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
+                Project
               </a>
             </li>
           </ul>
