@@ -95,15 +95,5 @@
         "level":"80%"
       }
     ]
-  },
-  "portfolio":{
-    "projects": [
-      {
-        "title":"Placeholder Project Name",
-        "category":"1",
-        "image":"01.jpg",
-        "url":"https://www.paulwang.ca"
-      }
-    ]
   }
 }

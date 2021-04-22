@@ -1,34 +1,17 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
+import Project from "./Project";
 
-let id = 0;
 class Portfolio extends Component {
   render() {
-    if (!this.props.data) return null;
-
-    const projects = this.props.data.projects.map(function(projects) {
-      let projectImage = "images/portfolio/" + projects.image;
-
-      return (
-        <div key={id++} className="columns portfolio-item">
-          <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
-          </div>
-        </div>
-      );
-    });
-
     return (
       <section id="portfolio">
         <div className="row">
-          <div className="twelve columns collapsed">
             <h1>Currently working on a full-stack project (WIP)</h1>
 
             <div id="portfolio-wrapper" className="cf">
-              {projects}
+              <h1> hello</h1>
+              <Project/>
             </div>
-          </div>
         </div>
       </section>
     );
