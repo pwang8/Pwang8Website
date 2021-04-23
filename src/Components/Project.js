@@ -16,20 +16,60 @@ class Project extends Component {
         var render = Render.create({
             element: this.refs.ProjectDiv,
             engine: engine,
-            // options: {
-            //     width: 50%,
-            //     height: 50%,
-            //     wireframes: false
-            // }
+            options: {
+                width: 800,
+                height: 600,
+                //wireframes: false
+            }
         });
     
-        // create two boxes and a ground
-        var boxA = Bodies.rectangle(400, 200, 80, 80);
-        var boxB = Bodies.rectangle(450, 50, 80, 80);
-        var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+        // create bodies
+        var ground = Bodies.rectangle(600, 350, 300, 20, { isStatic: true });
+
+        let ball = Matter.Bodies.circle(200,300,20);
+        let sling = Matter.Constraint.create({
+            pointA: {x:200, y:300},
+            bodyB: ball,
+            stiffness: 0.4,
+        });
+
+        let stack = Matter.Composites.stack(500,140,10,10,0,0, (x,y)=>{
+            return Matter.Bodies.rectangle(x,y,20,20,{
+                // render:{
+                //     fillStyle:'#156234',
+                //     strokeStyle:'orange',
+                // }
+            });
+        });
+
+        //set mouse constraints
+        let mouse = Matter.Mouse.create(render.canvas);
+        let mouseConstraint = Matter.MouseConstraint.create(engine, {
+            mouse: mouse,
+            constraint: {
+                render: {
+                    visible:false
+                }
+            }
+        });
+        render.mouse = mouse;
+
+        let firing = false;
+        Matter.Events.on(mouseConstraint, 'enddrag', (e)=>{
+            if(e.body === ball) firing = true;
+        });
+        Matter.Events.on(engine, 'afterUpdate', ()=>{
+            if(firing && Math.abs(ball.position.x-200)<20 && Math.abs(ball.position.y-300)<20){
+                ball = Matter.Bodies.circle(200, 300, 20);
+                Matter.World.add(engine.world,ball);
+                sling.bodyB = ball;
+                firing = false;
+            }
+        });
     
         // add all of the bodies to the world
-        Composite.add(engine.world, [boxA, boxB, ground]);
+        Matter.World.add(engine.world,[sling, ball]);
+        Composite.add(engine.world, [stack, ground, mouseConstraint]);
     
         // run the renderer
         Render.run(render);
@@ -43,7 +83,7 @@ class Project extends Component {
 
     render() {
         return (
-            <div class="align-center" ref="ProjectDiv"></div>
+            <div className="align-center" ref="ProjectDiv"></div>
         );
     }
 }

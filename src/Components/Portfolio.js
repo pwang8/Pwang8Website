@@ -9,7 +9,6 @@ class Portfolio extends Component {
             <h1>Currently working on a full-stack project (WIP)</h1>
 
             <div id="portfolio-wrapper" className="cf">
-              <h1> hello</h1>
               <Project/>
             </div>
         </div>
