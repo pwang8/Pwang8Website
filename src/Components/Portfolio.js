@@ -9,7 +9,11 @@ class Portfolio extends Component {
             <h1>Currently working on a full-stack project (WIP)</h1>
 
             <div id="portfolio-wrapper" className="cf">
-              <Project/>
+              <Project
+                //Default Values
+                defaultCanvasHeight = {600}
+                defaultCanvasWidth = {600}
+              />
             </div>
         </div>
       </section>
