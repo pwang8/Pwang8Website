@@ -3,33 +3,46 @@ import React, { Component } from "react";
 class Leaderboard extends Component {
     constructor(props){
         super(props);
-        this.state = {}
+        this.state = {leaderboardEntries:[]};
     }
 
-    getLeaderboard = () => {
-        //Temp code since backend not implemented.
-        return([
-            {name:"Paul",score:100},
-            {name:"Ryan",score:80},
-            {name:"Jordan",score:60},
-        ]);
+
+
+    async componentDidMount() {
+        const API_URL = 'https://nptgn9fou5.execute-api.us-east-1.amazonaws.com/getAllScores';
+        // const data = {
+        //     name: "Paul-from-localhost",
+        //     score: 69
+        // }
+
+        fetch(API_URL, {method:'GET'})
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            this.setState({leaderboardEntries:data});
+        })
+        .catch(err => {
+            console.log(err);
+        });
     }
 
     render() {
-        const leaderboardEntries = this.getLeaderboard().map((leaderboardEntry, index)=>{
-            return(
-                <li key={index}>{leaderboardEntry.score + " - " + leaderboardEntry.name}</li>
-            );
-        });
-
         return (
             <div id="leaderboard-div"className="">
                 <h1>Leaderboards</h1>
                 <ul>
-                    {leaderboardEntries}
+                    {this.state.leaderboardEntries.map((entry, index) => (
+                        <li key={index}>
+                            {entry.Score + " - " + entry.Name}
+                        </li>
+                    ))}
                 </ul>
                 <h1>Your score is: {this.props.score}</h1>
-                {/* <form><input>Name</input></form> */}
+                {/* <form>
+                    <input>Name</input>
+                    <button>Submit</button>
+                </form> */}
             </div>
         );
     }

@@ -12,7 +12,6 @@ class Project extends Component {
     }
 
     componentDidMount() {
-        console.log(document.getElementById("game-div").offsetHeight + " - " + document.getElementById("game-div").offsetWidth);
         const WINDOW_HEIGHT = document.getElementById("game-div").offsetHeight ? document.getElementById("game-div").offsetHeight : this.props.defaultCanvasHeight;
         const WINDOW_WIDTH = document.getElementById("game-div").offsetWidth ? document.getElementById("game-div").offsetWidth : this.props.defaultCanvasWidth;
         const PLATFORM_X = WINDOW_WIDTH*0.75;
@@ -78,17 +77,19 @@ class Project extends Component {
         });
         render.mouse = mouse;
 
+        let remainingLives = 3;
         let firing = false;
         Matter.Events.on(mouseConstraint, 'enddrag', (e)=>{
             if(e.body === ball) firing = true;
         });
         Matter.Events.on(engine, 'afterUpdate', ()=>{
             //Logic pertaining to the slingshot
-            if(firing && Math.abs(ball.position.x-BALL_X)<20 && Math.abs(ball.position.y-BALL_Y)<20){
+            if(remainingLives > 0 && firing && Math.abs(ball.position.x-BALL_X)<20 && Math.abs(ball.position.y-BALL_Y)<20){
                 ball = Matter.Bodies.circle(BALL_X, BALL_Y, BALL_SIZE,{
                     density:0.002
                 });
                 Matter.World.add(engine.world,ball);
+                remainingLives--;
                 sling.bodyB = ball;
                 firing = false;
             }
