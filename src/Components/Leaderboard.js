@@ -23,7 +23,6 @@ class Leaderboard extends Component {
         }).catch(err => {
             console.log(err);
         });
-        console.log(bodyString);
 
     }
 
@@ -44,10 +43,6 @@ class Leaderboard extends Component {
 
     async componentDidMount() {
         const API_URL = 'https://nptgn9fou5.execute-api.us-east-1.amazonaws.com/getAllScores';
-        // const data = {
-        //     name: "Paul-from-localhost",
-        //     score: 69
-        // }
 
         fetch(API_URL, {method:'GET'})
         .then(res => {
