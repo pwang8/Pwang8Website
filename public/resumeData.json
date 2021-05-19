@@ -52,7 +52,7 @@
         "company":"General Dynamics - Mission Systems",
         "title":"Student Software Developer",
         "years":"Jan 2019 - Dec 2019",
-        "description":"One year co-op - worked as a junior developer on application level software for embedded GPS/communication devices."
+        "description":"One year co-op - worked as a junior developer on application level C++ software for embedded GPS/communication devices. Experienced CI/CD Jenkins pipelines via automated GoogleTest/Python tests."
       },
       {
         "company":"Alberta Distance Learning Center",
@@ -64,7 +64,7 @@
     "skills":[
       {
         "name":"ReactJS",
-        "level":"70%"
+        "level":"80%"
       },
       {
         "name":"Express",
@@ -76,11 +76,11 @@
       },
       {
         "name":"HTML/CSS",
-        "level":"60%"
+        "level":"90%"
       },
       {
         "name":"JS",
-        "level":"80%"
+        "level":"95%"
       },
       {
         "name":"Java",

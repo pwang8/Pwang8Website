@@ -23,7 +23,6 @@ class Leaderboard extends Component {
         }).catch(err => {
             console.log(err);
         });
-
     }
 
     sortEntriesByScore = (entriesArray) => {
