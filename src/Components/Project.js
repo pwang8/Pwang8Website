@@ -46,7 +46,11 @@ class Project extends Component {
         var ground = Bodies.rectangle(PLATFORM_X, PLATFORM_Y, PLATFORM_WIDTH, 20, { isStatic: true });
 
         let ball = Matter.Bodies.circle(BALL_X,BALL_Y,BALL_SIZE,{
-            density:0.002
+            density:0.002,
+            render:{
+                fillStyle: this.getRandomColor(),
+                strokeStyle: this.getRandomColor()
+            }
         });
         let sling = Matter.Constraint.create({
             pointA: {x:BALL_X, y:BALL_Y},
@@ -57,10 +61,11 @@ class Project extends Component {
         //x-100 and y-210 to offset the platform and height/width of the stack (10x10 of 20l squares)
         let stack = Matter.Composites.stack(PLATFORM_X-(SQUARE_SIZE*5),PLATFORM_Y-(5+SQUARE_SIZE*10),10,10,0,0, (x,y)=>{
             return Matter.Bodies.rectangle(x,y,SQUARE_SIZE,SQUARE_SIZE,{
-                density: 0.0008
-                // render:{
-                //     visible
-                // },
+                density: 0.0008,
+                render:{
+                    fillStyle: this.getRandomColor(),
+                    strokeStyle: this.getRandomColor()
+                }
                 // wireframe: false
             });
         });
@@ -90,7 +95,11 @@ class Project extends Component {
             //Logic pertaining to the slingshot and lives
             if(firing && Math.abs(ball.position.x-BALL_X)<20 && Math.abs(ball.position.y-BALL_Y)<20){
                 ball = Matter.Bodies.circle(BALL_X, BALL_Y, BALL_SIZE,{
-                    density:0.002
+                    density:0.002,
+                    render:{
+                        fillStyle: this.getRandomColor(),
+                        strokeStyle: this.getRandomColor()
+                    }
                 });
                 remainingLives--;
                 if(remainingLives > 0){
@@ -111,6 +120,10 @@ class Project extends Component {
                     this.setState({score: this.state.score+1});
                 }
             }
+            //This is for you guys, Connor+Trey
+            if(this.state.score>=100 && remainingLives>0){
+                this.setState({score: 101});
+            }
         });
     
         // add all of the bodies to the world
@@ -125,6 +138,11 @@ class Project extends Component {
     
         // run the engine
         Runner.run(runner, engine);
+    }
+
+    getRandomColor = () => {
+        let colors = ['#564138', '#2E86AB', '#F6F5AE', '#F5F749', '#F24236']
+        return colors[Math.floor(Math.random() * colors.length)];
     }
 
     render() {
