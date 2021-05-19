@@ -84,7 +84,7 @@ class Project extends Component {
         });
         Matter.Events.on(mouseConstraint, 'enddrag', (e)=>{
             if(e.body === ball) firing = true;
-            if(e.body !== ball) e.body.isStatic = false;
+            if(e.body !== ball && e.body !== ground) e.body.isStatic = false;
         });
         Matter.Events.on(engine, 'afterUpdate', ()=>{
             //Logic pertaining to the slingshot and lives
