@@ -79,18 +79,28 @@ class Project extends Component {
 
         let remainingLives = 3;
         let firing = false;
+        Matter.Events.on(mouseConstraint, 'startdrag', (e)=>{
+            if(e.body !== ball) e.body.isStatic = true;
+        });
         Matter.Events.on(mouseConstraint, 'enddrag', (e)=>{
             if(e.body === ball) firing = true;
+            if(e.body !== ball) e.body.isStatic = false;
         });
         Matter.Events.on(engine, 'afterUpdate', ()=>{
-            //Logic pertaining to the slingshot
-            if(remainingLives > 0 && firing && Math.abs(ball.position.x-BALL_X)<20 && Math.abs(ball.position.y-BALL_Y)<20){
+            //Logic pertaining to the slingshot and lives
+            if(firing && Math.abs(ball.position.x-BALL_X)<20 && Math.abs(ball.position.y-BALL_Y)<20){
                 ball = Matter.Bodies.circle(BALL_X, BALL_Y, BALL_SIZE,{
                     density:0.002
                 });
-                Matter.World.add(engine.world,ball);
                 remainingLives--;
-                sling.bodyB = ball;
+                if(remainingLives > 0){
+                    Matter.World.add(engine.world,ball);
+                    sling.bodyB = ball;
+                }
+                else{
+                    Matter.World.remove(engine.world,ball);
+                    sling.bodyB = null;
+                }
                 firing = false;
             }
 
