@@ -6,7 +6,7 @@ class Leaderboard extends Component {
         this.state = {leaderboardEntries:[]};
     }
 
-    submitScore = (event) => {
+    submitScore = async (event) => {
         event.preventDefault();
         const API_URL = "https://nptgn9fou5.execute-api.us-east-1.amazonaws.com/postDBEntry"
         const bodyString = JSON.stringify({
@@ -14,15 +14,20 @@ class Leaderboard extends Component {
             "score": this.props.score
         });
 
-        fetch(API_URL, {
+        await fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: bodyString
-        }).catch(err => {
+        })
+        .then(() => {
+            this.getScores();
+        })
+        .catch(err => {
             console.log(err);
         });
+
     }
 
     sortEntriesByScore = (entriesArray) => {
@@ -40,7 +45,7 @@ class Leaderboard extends Component {
         return entriesArray;
     }
 
-    async componentDidMount() {
+    getScores = () => {
         const API_URL = 'https://nptgn9fou5.execute-api.us-east-1.amazonaws.com/getAllScores';
 
         fetch(API_URL, {method:'GET'})
@@ -54,6 +59,10 @@ class Leaderboard extends Component {
         .catch(err => {
             console.log(err);
         });
+    }
+
+    async componentDidMount() {
+        this.getScores();
     }
 
     render() {
