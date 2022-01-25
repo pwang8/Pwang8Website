@@ -9,10 +9,8 @@
     "phone": "403-890-5609",
     "github":"https://github.com/pwang8",
     "address":{
-      "street":"5859 Dalcastle Dr. NW",
       "city":"Calgary",
-      "state":"AB",
-      "zip": "T3A 1Z2"
+      "state":"AB"
     },
     "resumedownload":"./images/Paul_Wang_Resume.pdf",
     "social":[
