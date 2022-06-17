@@ -1,9 +1,9 @@
 {
   "main": {
     "name":"Paul Wang",
-    "description":"Hi! I'm a software developer recently graduated from the University of Calgary. I was interested in full-stack development and so I built this website to explore it.",
+    "description":"Hi! I'm a software developer that was interested in full-stack development, so.. I built this website to explore it",
     "image":"profilepic.jpg",
-    "bio": "Once a programmer, I'm currently looking to utilize my technical background to transition into a Product Owner role, feel free to reach out via the contact information below!",
+    "bio": "Back when I graduated, I realized I didn't feel confident with modern web technologies, so I decided to play around with some of the free resources available on AWS. Ended up being useful as my online resume so here we are! I've been primarily a developer using C++ and C# but I am looking for opportunities to develop my career towards either modern back-end development or product management roles. Please reach out if you'd like to have a chat!",
     "contactmessage":"Let's chat over coffee",
     "email": "p.wang8@outlook.com",
     "phone": "403-890-5609",
@@ -50,19 +50,25 @@
         "company":"Teck Coal Ltd",
         "title":"Technical Analyst",
         "years":"Jun 2021 - Present",
-        "description":"Currently working as a software developer for Teck Coal, developing and providing support for an array of Drilling and Blasting applications using C# .NET Core and C++"
+        "description":"Currently working as a software developer for Teck Coal, developing and providing support for an array of Drilling and Blasting applications using C# .NET and C++."
       },
       {
         "company":"General Dynamics - Mission Systems",
-        "title":"Student Software Developer",
+        "title":"Software Developer",
         "years":"Jan 2019 - Dec 2019",
-        "description":"One year co-op - worked as a junior developer on application level C++ software for embedded GPS/communication devices. Experienced CI/CD Jenkins pipelines via automated GoogleTest/Python tests."
+        "description":"Worked as a junior developer on application level C++ software for embedded GPS/communication devices. Also gained experience with CI/CD via Jenkins and automated GoogleTest/Python tests."
       },
       {
         "company":"Alberta Distance Learning Center",
         "title":"Interactive Web Developer",
         "years":"Jan 2016 - Oct 2017",
         "description":"Worked with teachers, gathering requirements to develop learning tools/javascript web-apps to aid their respective online Moodle courses."
+      },
+      {
+        "company":"ATB Financial",
+        "title":"Junior Java Developer",
+        "years":"May 2015 - Sept 2015",
+        "description":"Worked on the portal team as a summer student, relevant technologies - Java/SAP UI5."
       }
     ],
     "skills":[
