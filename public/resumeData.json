@@ -1,16 +1,16 @@
 {
   "main": {
     "name":"Paul Wang",
-    "description":"Hi! I'm a software developer that was interested in full-stack development, so.. I built this website to explore it",
+    "description":"Hello, This is an old website of mine where I got to tinker around with deployment pipelines and AWS. The website's contents are outdated but feel free to download my resume.",
     "image":"profilepic.jpg",
-    "bio": "Back when I graduated, I realized I didn't feel confident with modern web technologies, so I decided to play around with some of the free resources available on AWS. Ended up being useful as my online resume so here we are! I've been primarily a developer using C++ and C# but I am looking for opportunities to develop my career towards either modern back-end development or product management roles. Please reach out if you'd like to have a chat!",
+    "bio": "On this website, I used Netlify for hosting and automatic deployment of the connected GitHub repo. The backend is hosted via a free AWS subscription, using lambda functions for the logic and DynamoDB for database.",
     "contactmessage":"Let's chat over coffee",
     "email": "p.wang8@outlook.com",
     "phone": "403-890-5609",
     "github":"https://github.com/pwang8",
     "address":{
-      "city":"Relocating to Vancouver",
-      "state":"BC - 10/22"
+      "city":"Vancouver",
+      "state":"BC"
     },
     "resumedownload":"./images/Paul_Wang_Resume.pdf",
     "social":[
