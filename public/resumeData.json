@@ -1,9 +1,9 @@
 {
   "main": {
     "name":"Paul Wang",
-    "description":"Hello, This is an old website of mine where I got to tinker around with deployment pipelines and AWS. The website's contents are outdated but feel free to download my resume.",
+    "description":"Hello, This is an old website of mine where I got to tinker around with deployment pipelines and AWS. The website's contents are outdated but feel free to download my resume",
     "image":"profilepic.jpg",
-    "bio": "On this website, I used Netlify for hosting and automatic deployment of the connected GitHub repo. The backend is hosted via a free AWS subscription, using lambda functions for the logic and DynamoDB for database.",
+    "bio": "Having been a dev for many years, I took a break and am now looking to transition into something new. \nOn this website, I used Netlify for hosting and automatic deployment of the connected GitHub repo. The backend is hosted via a free AWS subscription, using lambda functions for the logic and DynamoDB for database.",
     "contactmessage":"Let's chat over coffee",
     "email": "p.wang8@outlook.com",
     "phone": "403-890-5609",
