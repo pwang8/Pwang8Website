@@ -8,7 +8,7 @@ class Portfolio extends Component {
         <div className="row">
             <div id="portfolio-wrapper" className="cf">
               <h1>Project</h1>
-              <p>Scores are stored on AWS Dynamo-DB and displayed for all visitors of the site. I ask that you be respectful when submitting names alongside your score. It's just a silly game since I primarily just wanted an excuse to tinker around with AWS tech in the back-end but have fun!</p>
+              <p>A quick game built so there would be something going to the database. It's quite fun. Please be respectful when submitting names, as they are displayed to all users, thanks!</p>
               <Project
                 //Default Values
                 defaultCanvasHeight = {600}
